@@ -1,13 +1,13 @@
 import React from 'react';
-import SomeComponent from '../../components/SomeComponent';
-import UserList from '../../components/UserList';
+import Header from '../../components/Header'
+
 
 export default function(){
   return(
-    <>
-      <SomeComponent />
-      <UserList />
-      {/* <Comp /> */}
+    <> 
+      <Header/>     
+      
+      
     </>
   )
 }
