@@ -1,0 +1,15 @@
+.text {
+    text-align: center;
+    color: red;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+ul{
+    list-style: none;
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

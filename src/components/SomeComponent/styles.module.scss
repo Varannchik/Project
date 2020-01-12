@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 130px;
+    max-width: 300px;
+    border: 1px solid;
+    margin: 30px auto;
+    border-radius: 2px;
+    padding: 10px 20px;
+    align-items: center;
+    .count {
+        display: block;
+        padding: 14px 20px;
+        margin: 0;
+    }
+    button {
+        display: block;
+        width: 100%;
+        border: 1px solid black;
+        background: transparent;
+        min-width: 100px;
+        line-height: 20px;
+        border-radius: 3px;
+        &:first-child{
+            margin-bottom: 5px;
+        }
+    } 
+}
