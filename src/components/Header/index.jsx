@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import styles from './styles.module.scss';
+import img from './img/logo.svg'
 
-export default class extends Component{
+export default class extends Component{   
     render(){       
         return (
-            <div >
+            <div>
                 <header>       
                     <div className={styles.main_menu}>
                         <div className={styles.container}>
                             <div className={styles.content_menu}>
-                                <a href="./" class={styles.logo}><img src="../../image/logo.svg" alt="logo" /></a>                    
+                                <a href="./" class={styles.logo}><img src={img} alt="logo"/></a>                    
                                 <div className={styles.mobile_menu}>
                                 <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="23" height="2" rx="1" fill="#222B3A"/>
@@ -17,7 +18,7 @@ export default class extends Component{
                                     <rect x="5" y="14" width="18" height="2" rx="1" fill="#222B3A"/>
                                     </svg>
                                     </div>
-                                <nav>
+                                <nav>                                    
                                     <a href="./">Главная</a>
                                     <a href="./">Материалы для вас</a>
                                     <a href="./">Календарь курсов</a>

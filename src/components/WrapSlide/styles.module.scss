@@ -1,0 +1,74 @@
+@import '../../variable.scss';
+
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    color: $font_color;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.name_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    .rotate{
+        transform: rotate(0deg);
+    }
+    .un_rotate{
+        transform: rotate(180deg);
+    }
+    h2{
+        font-family: 'Proxima Nova Bold';
+        font-size: 32px;
+        line-height: 39px;
+        color: $dark_blue;
+        position: relative;
+        padding-left: 30px;
+        overflow: hidden;
+        width: 100%;
+        &::before, &::after
+        {   
+            content: '';
+            position: absolute;
+            display: inline-block;            
+            border-width: 0 10px;
+            vertical-align: middle;
+            height: 0px;
+            box-sizing: border-box;
+            
+            border-width: 0 100%;
+            top: 0;            
+            bottom: 0;
+            margin: auto;
+        }
+        &::before{
+            width: 22px; 
+            left: 0;
+            border: 1px solid $dark_blue;
+        }
+        &::after{          
+           width: 100%;
+           margin-left: 10px;
+           border: 1px solid $light_gray_line; 
+        }         
+    }
+    svg{
+        margin-left: 10px;
+        cursor: pointer;
+        
+    }
+}
+
+.section_content{
+    padding-bottom: 65px;
+    margin-top: 20px;
+
+    .form{
+        .ol{
+            counter-reset: myCounter;
+            padding: 0;
+        }
+    }   
+}

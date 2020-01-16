@@ -1,0 +1,8 @@
+@import '../../variable.scss';
+
+.form{
+    .ol{
+        counter-reset: myCounter;
+        padding: 0;
+    }
+}

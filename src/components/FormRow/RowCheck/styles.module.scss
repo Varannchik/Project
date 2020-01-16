@@ -1,0 +1,107 @@
+@import '../../../variable.scss';
+
+.li{               
+    border-bottom: 1.3px solid $light_gray;
+    list-style: none;
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto 24px;
+        counter-increment: myCounter;
+        content:counter(myCounter);
+        font-family: 'Proxima Nova Bold';
+        color: $dark_blue;
+        background:$light_gray;
+        display: inline-block;
+        text-align: center;                    
+        font-size: 16px;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;                    
+    } 
+    .content_list{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: 'Proxima Nova Bold';
+        color: $dark_blue;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        
+        input[type="checkbox"]:checked, 
+        input[type="checkbox"]:not(:checked){
+            position: absolute;
+            left: -9999px;
+            
+        }
+                                            
+        
+        label{
+            padding: 23px 55px 27px 80px;
+            cursor: pointer; 
+            &::before{
+                content: "";
+                position: absolute;
+                margin: auto;
+                right:0;
+                top: 0;
+                bottom: 0;
+                display: block;                                    
+                width: 25px;
+                height: 25px;                        
+                background: $footer_colour;
+                border-radius: 3px;  
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+
+                right: 5px;
+                top: -3px;
+                bottom: 0;
+                margin: auto;
+                width: 10px;
+                height: 5px;
+                border-radius: 1px;
+                border-left: 4px solid $white;
+                border-bottom: 4px solid $white;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }                                             
+        }
+
+        input[type="checkbox"]:not(:checked) + label:after { 
+                opacity: 0;
+        }
+        input[type="checkbox"]:not(:checked) + label:before { 
+            background: #FAFAFA;
+            border: 1px solid #DADADA;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"]:checked + label:after{
+            opacity: 1;        
+        }
+    } 
+    &:last-child{
+        border-bottom: 1.3px solid transparent; 
+    }                             
+}
+            
+            
+           
+        

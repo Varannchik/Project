@@ -1,0 +1,54 @@
+$font_color:#222B3A;
+$black:#222B3A;
+$orange:#FC890D;
+$blue:#296DCE;
+$light_blue:#1092CB;
+$footer_colour:#0099DD;
+$dark_blue:#222B3A;
+$white:#ffffff;
+$light_gray:#F3F3F3;
+$thems_gray:#FAFAFA;
+$gray:#979FAD;
+$age_colour:#979FAD;
+$dark_gray:#696969;
+$number_theme:#E1E1E1;
+$main_blue_bg:#56c3e0;
+$dark_orange:#FFA43F;
+$gray_bg_button:#DFDADA;
+$red:#EB5757;
+$light_gray_line:#F1F1F1;
+$link_orange:#FF8A00;
+$blue_text:#027EB4;
+$activity_border:#EAEAEA;
+$color_time:#BDBDBD;
+
+@font-face {
+    font-family: 'Proxima Nova Bold';       
+    font-weight: 700;
+    font-style: normal;    
+    src: url('./fonts/ProximaNova-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Proxima Nova Extra Bold';    
+    font-weight: 900;
+    font-style: normal;
+    src: url('./fonts/ProximaNova-Extrabld.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    font-weight: 400;
+    font-style: normal;
+    src: url('./fonts/ProximaNova-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    font-weight: 500;
+    font-style: normal;
+    src: url('./fonts/ProximaNova-Semibold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Intro';
+    font-weight: 400;
+    font-style: normal;
+    src: url('./fonts/Intro.ttf') format('truetype');
+}
