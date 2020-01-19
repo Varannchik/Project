@@ -13,12 +13,12 @@ export default class extends Component{
 
     render(){
         return(
-            <section class={styles.bg_gray}>
-                <div class={styles.container}>
-                    <ul class={styles.breadcrumb}>
+            <section className={styles.bg_gray}>
+                <div className={styles.container}>
+                    <ul className={styles.breadcrumb}>
                         <li><a href="./">Главная</a></li>
                         <li><a href="./">{this.state.crumb1}</a></li>             
-                        <li class={styles.active}>{this.state.crumb2}</li>
+                        <li className={styles.active}>{this.state.crumb2}</li>
                     </ul>
                 </div>        
             </section>

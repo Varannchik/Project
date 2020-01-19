@@ -18,7 +18,8 @@ const row=[
     { 
         "id":"checkbox4",
         "title":"Объяснить отцу или другим членами семьи, которые проживают с вами о предстоящем этапе в вашей семье"
-    }
+    },
+    
 ]
 
 export default class extends Component{
