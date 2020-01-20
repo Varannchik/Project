@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 function RowFun (props){
-    console.log(props)
+    
     return (
         <li key={`${props.title}_{props.body}`} class={styles.li}>
             <div class={styles.content_list}>

@@ -72,3 +72,26 @@
         }
     }   
 }
+
+.dop_ex{
+    .item{
+        border:1.5px solid transparent;
+        border-bottom: 1.5px solid $light_gray;
+        box-sizing: border-box;
+        box-shadow:none;
+        border-radius: 0; 
+        &:hover{
+            border:1.5px solid $dark_orange; 
+            .number{
+                span{
+                    border-radius: 0 0 3px 0;  
+                }
+            } 
+        }
+    }
+    .number{
+        span{
+            border-radius: 3px;
+        }
+    }
+}
