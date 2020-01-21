@@ -1,39 +1,46 @@
 import React, { Component } from 'react';
-import UserPad from './UserPad'
-import styles from './styles.module.scss';
-import axios from 'axios';
+
 
 export default class extends Component{
     constructor(props){
         super(props);
+        // this.state = {
+        //     value:{
+        //         a:''
+        //     }           
+        // }
         this.state = {
-            userlist:[]            
+            value:''   
         }
+        this.handleChange = this.handleChange.bind(this);
     };
 
-    
-    componentDidMount(){
-        console.log('DidMount');
-        axios.get('https://jsonplaceholder.typicode.com/users') //ссылка откуда делаю запрос 
-            .then(data=>{                
-                this.setState({
-                    userlist:data.data
-                });
-            })
-    }
-    
-    componentWillMount(){
-        console.log('WillMount');
+    handleChange(event) {
+        // this.setState({value:{a:''}: event.target.value.a});
+         this.setState({value: event.target.value});
     }
 
+    // shouldComponentUpdate(nextProps,nextState){
+    //     // if(Number(nextState.value) >10){
+    //     //     return false
+    //     // }else{
+    //     //     return true
+    //     // }
+    //     if(nextProps.value===this.state.value){
+    //         return false
+    //     }
+    // }
+
     render(){
-        console.log('render');
+        // console.log(this.state.value.a);
+        console.log(this.state.value);
         return (
             <div>
-                <div className={styles.text}>All users</div>
-                <ul>
-                    {this.state.userlist.map((el)=>{return <UserPad id={el.id} email = {el.email} name={el.name} username={el.username}/>})}               
-                </ul>
+                {/* <input type="text" value={this.state.value.a} onChange={this.handleChange}/>
+                <div>{this.state.value.a}</div> */}
+
+                <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                <div>{this.state.value}</div>
             </div>        
         )
     }
