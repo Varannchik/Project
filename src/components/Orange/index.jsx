@@ -5,12 +5,25 @@ import styles from './styles.module.scss';
 
 
 export default class extends Component{
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            active:false,
+           
+        }; 
+        this.handleClick=this.handleClick.bind(this) 
+      }
+  
+    handleClick(){
+        console.log(this.state.active);
+        this.setState({active:!this.state.active})
+        
+    }
     render(){
         return( 
             <label className={styles.item+' '+styles.checkbox}>
                 <input type="checkbox"/>
-                <div className={styles.check}></div>
+                <div className={!this.state.active?styles.check:styles.check_on } onClick={this.handleClick}></div>
                 <div className={styles.info}>
                     <span className={styles.article}>
                         <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
