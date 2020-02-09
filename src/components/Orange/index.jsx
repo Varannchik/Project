@@ -1,29 +1,16 @@
-import React, { Component } from 'react';
 import styles from './styles.module.scss';
-//import TextOrange from './TextOrange';
+import React , {useState} from 'react';
 
-
-
-export default class extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            active:false,
-           
-        }; 
-        this.handleClick=this.handleClick.bind(this) 
-      }
-  
-    handleClick(){
-        console.log(this.state.active);
-        this.setState({active:!this.state.active})
-        
+export default function (props){    
+    const [active,setActive]=useState(false);
+    const handleClick=()=>{
+        setActive(!active)        
     }
-    render(){
+    
         return( 
             <label className={styles.item+' '+styles.checkbox}>
                 <input type="checkbox"/>
-                <div className={!this.state.active?styles.check:styles.check_on } onClick={this.handleClick}></div>
+                <div className={!active?styles.check:styles.check_on } onClick={handleClick}></div>
                 <div className={styles.info}>
                     <span className={styles.article}>
                         <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,8 +25,8 @@ export default class extends Component{
                         </svg>
                         1 час 15 минут
                     </span>
-                    {/* {content.map((el)=>{return <TextOrange  content={el.content}/>})} */}
-                    <p>{this.props.cont}</p>
+                    
+                    <p>{props.cont}</p>
                     <a href="/#" className={styles.modal}><svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.61667 0C4.7 0 1.33167 2.42833 0 5.875C1.33167 9.32167 4.7 11.75 8.61667 11.75C12.5333 11.75 15.9017 9.32167 17.2333 5.875C15.9017 2.42833 12.5333 0 8.61667 0ZM8.61667 9.79167C6.42333 9.79167 4.7 8.06833 4.7 5.875C4.7 3.68167 6.42333 1.95833 8.61667 1.95833C10.81 1.95833 12.5333 3.68167 12.5333 5.875C12.5333 8.06833 10.81 9.79167 8.61667 9.79167ZM8.61667 3.525C7.285 3.525 6.26667 4.54333 6.26667 5.875C6.26667 7.20667 7.285 8.225 8.61667 8.225C9.94833 8.225 10.9667 7.20667 10.9667 5.875C10.9667 4.54333 9.94833 3.525 8.61667 3.525Z" />
                         <defs>                        
@@ -51,12 +38,12 @@ export default class extends Component{
                         </svg>
                         Напомнить</a>
                 </div>
-                <div className={styles.number}><span>{this.props.number}</span></div>
+                <div className={styles.number}><span>{props.number}</span></div>
                 <div className={styles.icons}>
-                        {this.props.icon}                              
+                        {props.icon}                              
                 </div> 
             </label>                    
         )
-    }
+    
 }
 
