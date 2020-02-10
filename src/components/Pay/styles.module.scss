@@ -1,0 +1,15 @@
+.itemlist{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.someitem{
+    display: flex;
+    flex-direction: column;
+    min-width: 225px
+}
+.text{    
+    font-family: Proxima Nova;
+    font-size: 18px;
+    line-height: 30px;
+}
